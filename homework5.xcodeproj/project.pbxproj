@@ -27,6 +27,7 @@
 		7BC397E72CF733390058C261 /* homework5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC397F82CF7333A0058C261 /* homework5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homework5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC398022CF7333A0058C261 /* homework5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homework5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC398272CF743700058C261 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -38,11 +39,6 @@
 		7BC397FB2CF7333A0058C261 /* homework5Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = homework5Tests;
-			sourceTree = "<group>";
-		};
-		7BC398052CF7333A0058C261 /* homework5UITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = homework5UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +71,9 @@
 		7BC397DE2CF733390058C261 = {
 			isa = PBXGroup;
 			children = (
+				7BC398272CF743700058C261 /* .swiftlint.yml */,
 				7BC397E92CF733390058C261 /* homework5 */,
 				7BC397FB2CF7333A0058C261 /* homework5Tests */,
-				7BC398052CF7333A0058C261 /* homework5UITests */,
 				7BC397E82CF733390058C261 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +102,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7BC398262CF7420E0058C261 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				7BC397E92CF733390058C261 /* homework5 */,
@@ -128,6 +125,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7BC398242CF742000058C261 /* PBXTargetDependency */,
 				7BC397FA2CF7333A0058C261 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
@@ -152,9 +150,6 @@
 			);
 			dependencies = (
 				7BC398042CF7333A0058C261 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7BC398052CF7333A0058C261 /* homework5UITests */,
 			);
 			name = homework5UITests;
 			packageProductDependencies = (
@@ -195,6 +190,9 @@
 			);
 			mainGroup = 7BC397DE2CF733390058C261;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7BC398192CF733B70058C261 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7BC397E82CF733390058C261 /* Products */;
 			projectDirPath = "";
@@ -265,6 +263,14 @@
 			isa = PBXTargetDependency;
 			target = 7BC397E62CF733390058C261 /* homework5 */;
 			targetProxy = 7BC398032CF7333A0058C261 /* PBXContainerItemProxy */;
+		};
+		7BC398242CF742000058C261 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7BC398232CF742000058C261 /* SwiftLintBuildToolPlugin */;
+		};
+		7BC398262CF7420E0058C261 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7BC398252CF7420E0058C261 /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -541,6 +547,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BC398192CF733B70058C261 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.57.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BC398232CF742000058C261 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BC398192CF733B70058C261 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		7BC398252CF7420E0058C261 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BC398192CF733B70058C261 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BC397DF2CF733390058C261 /* Project object */;
 }
